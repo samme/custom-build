@@ -15,7 +15,8 @@
     "buildfull": "webpack --config webpack.config-full.js",
     "buildfulllog": "webpack --config webpack.config-full.js --json --profile > webpack.build-full-log.json",
     "buildcore": "webpack --config webpack.config-core.js",
-    "buildcorelog": "webpack --config webpack.config-core.js --json --profile > webpack.build-core-log.json"
+    "buildcorelog": "webpack --config webpack.config-core.js --json --profile > webpack.build-core-log.json",
+    "open": "http-server -c-1 -d-1 --no-dotfiles -o /test/index.html"
   },
   "repository": {
     "type": "git",
@@ -36,6 +37,7 @@
     "webpack-cli": "^5.1.4"
   },
   "devDependencies": {
+    "http-server": "^14.1.1",
     "prettier": "3.0.3"
   }
 }
