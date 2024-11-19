@@ -1,10 +1,10 @@
 /**
- * @author       Richard Davey <rich@photonstorm.com>
- * @copyright    2023 Photon Storm Ltd.
+ * @author       Richard Davey <rich@phaser.io>
+ * @copyright    2013-2024 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
-require('polyfills');
+require('polyfills/requestVideoFrame');
 
 var CONST = require('const');
 var Extend = require('utils/object/Extend');
@@ -24,7 +24,7 @@ var Phaser = {
     Data: require('data'),
     Display: { Masks: require('display/mask') },
     DOM: require('dom'),
-    Events: require('events/EventEmitter'),
+    Events: require('events'),
     FX: require('fx'),
     Game: require('core/Game'),
     GameObjects: {
@@ -36,7 +36,7 @@ var Phaser = {
         BuildGameObject: require('gameobjects/BuildGameObject'),
         BuildGameObjectAnimation: require('gameobjects/BuildGameObjectAnimation'),
         GameObject: require('gameobjects/GameObject'),
-        Graphics: require('gameobjects/graphics/Graphics.js'),
+        Graphics: require('gameobjects/graphics/Graphics'),
         Image: require('gameobjects/image/Image'),
         Layer: require('gameobjects/layer/Layer'),
         Sprite: require('gameobjects/sprite/Sprite'),
@@ -101,7 +101,7 @@ var Phaser = {
     Tweens: require('tweens')
 };
 
-//   Merge in the consts//  Merge in the optional plugins and WebGL only features
+//  Merge in the optional plugins and WebGL only features
 
 if (typeof FEATURE_SOUND)
 {

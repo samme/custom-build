@@ -1,10 +1,10 @@
 /**
- * @author       Richard Davey <rich@photonstorm.com>
- * @copyright    2023 Photon Storm Ltd.
+ * @author       Richard Davey <rich@phaser.io>
+ * @copyright    2013-2024 Phaser Studio Inc.
  * @license      {@link https://opensource.org/licenses/MIT|MIT License}
  */
 
-require('polyfills');
+require('polyfills/requestVideoFrame');
 
 var CONST = require('const');
 var Extend = require('utils/object/Extend');
@@ -27,7 +27,7 @@ var Phaser = {
     Data: require('data'),
     Display: require('display'),
     DOM: require('dom'),
-    Events: require('events/index'),
+    Events: require('events'),
     FX: require('fx'),
     Game: require('core/Game'),
     GameObjects: require('gameobjects'),
@@ -56,6 +56,19 @@ var Phaser = {
 if (typeof FEATURE_SOUND)
 {
     Phaser.Sound = require('sound');
+}
+
+if (typeof PLUGIN_CAMERA3D)
+{
+    Phaser.Cameras.Sprite3D = require('../plugins/camera3d/src');
+    Phaser.GameObjects.Sprite3D = require('../plugins/camera3d/src/sprite3d/Sprite3D');
+    Phaser.GameObjects.Factories.Sprite3D = require('../plugins/camera3d/src/sprite3d/Sprite3DFactory');
+    Phaser.GameObjects.Creators.Sprite3D = require('../plugins/camera3d/src/sprite3d/Sprite3DCreator');
+}
+
+if (typeof PLUGIN_FBINSTANT)
+{
+    Phaser.FacebookInstantGamesPlugin = require('../plugins/fbinstant/src/FacebookInstantGamesPlugin');
 }
 
 //   Merge in the consts
