@@ -72,6 +72,31 @@ var Phaser = {
             SpriteSheetFile: require('loader/filetypes/SpriteSheetFile'),
             TextFile: require('loader/filetypes/TextFile'),
             XMLFile: require('loader/filetypes/XMLFile')
+            /*
+            Not included:
+            ------------
+            - AsepriteFile.js
+            - AtlasXMLFile.js
+            - BinaryFile.js
+            - BitmapFontFile.js
+            - CSSFile.js
+            - CompressedTextureFile.js
+            - FontFile.js
+            - GLSLFile.js
+            - HTMLFile.js
+            - HTMLTextureFile.js
+            - MultiScriptFile.js
+            - OBJFile.js
+            - PackFile.js
+            - SceneFile.js
+            - ScenePluginFile.js
+            - SVGFile.js
+            - TilemapCSVFile.js
+            - TilemapImpactFile.js
+            - TilemapJSONFile.js
+            - UnityAtlasFile.js
+            - VideoFile.js
+            */
         },
         File: require('loader/File'),
         FileTypesManager: require('loader/FileTypesManager'),
