@@ -12,7 +12,7 @@ This guide is based on creating a custom build of Phaser 3.50. When newer versio
 
 To start with I'd recommend you [clone this template repo](https://github.com/photonstorm/phaser3-custom-build). It will save a whole bunch of time getting set-up. Clone it, then `npm install` to grab the dependencies. You're now ready to do a custom build.
 
-If you issue the command `npm run build` (or `webpack` if you've got it available globally) from the project folder then it'll create a custom build into the `dist` folder. This file is called `phaser-custom.js`. Inside the `test` folder you'll find an `index.html` file. Open this in a browser via an http server, or with local file permissions enabled, and you should see the following:
+If you issue the command `npm run build` (or `webpack` if you've got it available globally) from the project folder then it'll create a custom build into the `dist` folder. This file is called `phaser-custom.js`. Inside the `test` folder you'll find an `index.html` file. Issue the command `npm run open` and you should see the following:
 
 [![image](https://cascade.madmimi.com/promotion_images/6092/3212/original/custom1.png?1535988194)]()
 
